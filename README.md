@@ -1,9 +1,19 @@
 # To Do List App
+
 This repository contains a simple yet functional task management application built with React. The application allows users to add, edit, delete, and search for tasks. Tasks are displayed as sticky notes and are fetched from a dummy JSON file. The UI is responsive and adapts to various screen sizes.
 
-# Overview of the System Design
+# System Design
+
+• React: The core library used for building the user interface.
+• Vite: A build tool that provides a fast development environment and optimized build for the application.
+• React Router: Used for handling routing within the application.
+• LocalStorage: Custom hook to manage task data persistently in the browser.
+• Heroicons: Provides icons used in the task items for actions like edit and delete.
+
+  # Components 
 
 The application is divided into several key components:
+
 • App Component: The main component that orchestrates the application, handling state management and routing.
 
 • CustomForm Component: A form component used to add new tasks.
