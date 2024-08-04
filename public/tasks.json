@@ -1,0 +1,24 @@
+[
+    {
+      "id": "1",
+      "name": "My Task 1",
+      "checked": false,
+      "description": "This is a detailed description of task 1.",
+      "lastUpdated": "2023-01-01T12:00:00Z"
+    },
+    {
+      "id": "2",
+      "name": "My Task 2",
+      "checked": true,
+      "description": "This is a detailed description of task 2.",
+      "lastUpdated": "2023-01-02T12:00:00Z"
+    },
+    {
+      "id": "3",
+      "name": "My Task 3",
+      "checked": false,
+      "description": "This is a detailed description of task 3.",
+      "lastUpdated": "2023-01-03T12:00:00Z"
+    }
+  ]
+  

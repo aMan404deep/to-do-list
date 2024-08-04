@@ -1,0 +1,49 @@
+  .tasks {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    list-style-type: none;
+    gap: 1.5em;
+    padding: 1em;
+    margin: 0;
+  }
+
+  @media (min-width: 300px) {
+    .tasks {
+      grid-template-columns:auto ;
+    }
+  }
+  @media (min-width: 600px) {
+    .tasks {
+      grid-template-columns:auto auto auto;
+    }
+  }
+  
+  @media (min-width: 800px) {
+    .tasks {
+      grid-template-columns: auto ;
+      padding: 0rem;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .tasks {
+      grid-template-columns: auto ;
+      padding: 0rem;
+    }
+  }
+  
+  @media (min-width: 1000px) {
+    .tasks {
+      grid-template-columns: auto auto;
+      padding: 0rem;
+    }
+  }
+  @media (min-width: 1200px) {
+    .tasks {
+      grid-template-columns: auto auto auto;
+      gap: 2.5em;
+    }
+  }
+  

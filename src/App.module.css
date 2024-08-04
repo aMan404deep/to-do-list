@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+
+.header {
+  margin-bottom: 2em;
+}
+
+.mainContent {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  gap: 5rem;
+}
+
+.leftPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.rightPanel {
+  flex: 2;
+  padding-inline: 2rem;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .leftPanel, .rightPanel {
+    width: 100%;
+  }
+}
+
+

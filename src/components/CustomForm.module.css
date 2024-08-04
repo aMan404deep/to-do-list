@@ -1,0 +1,55 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.label {
+  font-size: 0.9em;
+  color: hsl(var(--txt));
+}
+
+.input, .textarea {
+  padding: 0.5em;
+  padding-inline: 3rem;
+  border: 1px solid hsl(var(--muted) / 0.8);
+  border-radius: var(--_radius);
+  background-color: hsl(var(--muted));
+  color: hsl(var(--txt));
+}
+
+.textarea {
+  height: 100px;
+  resize: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.button {
+  padding: 0.7em;
+  border: none;
+  border-radius: var(--_radius);
+  background-color: hsl(var(--accent));
+  color: hsl(var(--bg));
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: hsl(var(--accent) / 0.8);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2em hsl(var(--accent));
+}
