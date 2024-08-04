@@ -7,9 +7,10 @@ import { TrashIcon } from '@heroicons/react/24/outline';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
 
 const TaskItem = ({ task, deleteTask, toggleTask, enterEditMode }) => {
+  // State to manage the checkbox state  
   const [isChecked, setIsChecked] = useState(task.checked);
   const [isExpanded, setIsExpanded] = useState(false);
-
+  // Function to handle checkbox change
   const handleCheckboxChange = (e) => {
     setIsChecked(!isChecked);
     toggleTask(task.id);

@@ -2,10 +2,12 @@ import { useState } from 'react';
 import styles from './CustomForm.module.css';
 
 const CustomForm = ({ addTask }) => {
+  // State to manage the input value  
   const [taskName, setTaskName] = useState('');
   const [description, setDescription] = useState('');
 
   const handleSubmit = (e) => {
+    // Function to handle form submission
     e.preventDefault();
     if (taskName.trim() === '') return;
     addTask({ id: Date.now().toString(), name: taskName, description, checked: false, lastUpdated: Date.now() });

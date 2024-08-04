@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from './EditForm.module.css';
 
 const EditForm = ({ editedTask, updateTask, closeEditMode }) => {
+  // State to manage the form values  
   const [taskName, setTaskName] = useState(editedTask.name);
   const [description, setDescription] = useState(editedTask.description);
 
@@ -9,7 +10,7 @@ const EditForm = ({ editedTask, updateTask, closeEditMode }) => {
     setTaskName(editedTask.name);
     setDescription(editedTask.description);
   }, [editedTask]);
-
+  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     if (taskName.trim() === '') return;

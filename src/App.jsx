@@ -1,21 +1,28 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
+// custom components
 import CustomForm from './components/CustomForm';
 import EditForm from './components/EditForm';
 import TaskList from './components/TaskList';
 import SearchBox from './components/Search';
 
+// styles
 import styles from './App.module.css';
 
+// Custom hook to get query parameters
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
 function App() {
+  // State to manage tasks
   const [tasks, setTasks] = useState([]);
+  // State to keep track of the previously focused element  
   const [previousFocusEl, setPreviousFocusEl] = useState(null);
+  // State for the task being edited
   const [editedTask, setEditedTask] = useState(null);
+  // State to manage edit mode
   const [isEditing, setIsEditing] = useState(false);
   const [selectedTask, setSelectedTask] = useState(null);
 
@@ -23,27 +30,28 @@ function App() {
   const navigate = useNavigate();
   const searchQuery = query.get('search') || '';
 
+  // State for the search input
   const [searchInput, setSearchInput] = useState(searchQuery);
 
   useEffect(() => {
     setSearchInput(searchQuery);
   }, [searchQuery]);
-
+  // Update search input when the query changes
   useEffect(() => {
     fetch('/tasks.json')
       .then(response => response.json())
       .then(data => setTasks(data))
       .catch(error => console.error('Error fetching tasks:', error));
   }, []);
-
+  // Function to add a new task
   const addTask = (task) => {
     setTasks(prevState => [...prevState, task]);
   };
-
+  // Function to delete a task
   const deleteTask = (id) => {
     setTasks(prevState => prevState.filter(t => t.id !== id));
   };
-
+  // Function to toggle task completion
   const toggleTask = (id) => {
     setTasks(prevState => prevState.map(t => (
       t.id === id
@@ -51,7 +59,7 @@ function App() {
         : t
     )));
   };
-
+  // Function to update a task
   const updateTask = (task) => {
     setTasks(prevState => prevState.map(t => (
       t.id === task.id
@@ -60,18 +68,18 @@ function App() {
     )));
     closeEditMode();
   };
-
+  // Function to close edit mode
   const closeEditMode = () => {
     setIsEditing(false);
     if (previousFocusEl) previousFocusEl.focus();
   };
-
+  // Function to enter edit mode
   const enterEditMode = (task) => {
     setEditedTask(task);
     setIsEditing(true);
     setPreviousFocusEl(document.activeElement);
   };
-
+  // Function to handle search input changes
   const handleSearch = (event) => {
     const value = event.target.value;
     setSearchInput(value);
@@ -85,7 +93,7 @@ function App() {
   const closePopup = () => {
     setSelectedTask(null);
   };
-
+  // Filter tasks based on the search input
   const filteredTasks = tasks.filter(task =>
     task.name.toLowerCase().includes(searchInput.toLowerCase())
   );
