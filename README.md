@@ -5,9 +5,13 @@ This repository contains a simple yet functional task management application bui
 # System Design
 
 • React: The core library used for building the user interface.
+
 • Vite: A build tool that provides a fast development environment and optimized build for the application.
+
 • React Router: Used for handling routing within the application.
+
 • LocalStorage: Custom hook to manage task data persistently in the browser.
+
 • Heroicons: Provides icons used in the task items for actions like edit and delete.
 
   # Components 
