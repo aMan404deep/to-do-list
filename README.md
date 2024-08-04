@@ -52,9 +52,10 @@ State management is handled using the useState and useEffect hooks. The useLocal
 
 # Task Display
 
-Tasks are displayed as sticky notes using CSS. When a task is clicked, it opens in a popup for a detailed view.
+Tasks are displayed as sticky notes using CSS. 
+When a task is clicked, it opens in a popup for a detailed view.
 
-Instructions to Set Up and Run the Application
+#Instructions to Set Up and Run the Application: 
 
 # Prerequisites
 Node.js and npm should be installed on your machine.
@@ -63,8 +64,8 @@ Node.js and npm should be installed on your machine.
 
 1. Clone the Repository:
 ```console
-git clone https://github.com/your-username/task-management-app.git
-cd task-management-app
+git clone https://github.com/aMan404deep/to-do-list.git
+cd to-do-list
 ```
 2. Install Dependencies:
 ```console
@@ -72,7 +73,7 @@ npm install
 ```
 3. Start the Application:
 ```console
-npm start
+npm run dev
 ```
 
 This will start the application and open it in your default web browser. If it doesn't, you can manually open your browser and navigate to http://localhost:5173.
